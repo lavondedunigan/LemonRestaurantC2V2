@@ -11,7 +11,6 @@ struct ContentView: View {
     var body: some View {
         NavigationView{
             VStack {
-                
                 Image("littleLemonLogo")
                 Image(systemName: "sun.max")
                     .imageScale(.large)
