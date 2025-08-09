@@ -27,7 +27,7 @@ struct Aboutview: View {
             }
             // challenge: add another button to reset orders to 0
             Button("Reset"){
-                orders = 0
+                orders
             }
             
             // mini form
