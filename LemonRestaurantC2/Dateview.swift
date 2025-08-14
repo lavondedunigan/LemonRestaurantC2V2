@@ -11,7 +11,7 @@ struct Dateview: View {
     @State private var wakeUp = Date.now
     
     var body: some View {
-        DatePicker("Please select a valid date, this is a test", selection: $wakeUp, in: Date.now...)
+        DatePicker("Please select a valid date, ", selection: $wakeUp, in: Date.now...)
             .labelsHidden()
     }
     
