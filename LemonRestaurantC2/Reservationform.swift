@@ -33,7 +33,7 @@ struct Reservationform: View {
                             .foregroundColor(.yellow)
                             .font(.caption)
                     }
-        
+                    
                     DatePicker("Date", selection: $reservationDate,
                                displayedComponents: [.date, .hourAndMinute])
                     TextField("Allergy Notes", text: $allergyNotes)
@@ -45,21 +45,21 @@ struct Reservationform: View {
                     }
                     .disabled(userName.isEmpty)
                     .navigationDestination(isPresented: $showSummary){
-                        ReservationSummaryView{
+                        ReservationSummaryView(
                             name:$userName,
                             date: $reservationDate,
                             guests:$guestCount,
                             allergyNotes:$allergyNotes
-                            
+                        )
+                    }
                     }
                 }
             }
+            .navigationTitle("Book a table")
+            
         }
-        .navigationTitle("Book a table")
-        
-        
     }
 
-    #Preview {
+#Preview {
     Reservationform()
 }
